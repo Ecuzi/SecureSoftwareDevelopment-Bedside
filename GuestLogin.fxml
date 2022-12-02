@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GuestLoginController">
+   <left>
+      <AnchorPane prefHeight="454.0" prefWidth="244.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="426.0" fitWidth="343.0" layoutX="-12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Guest.png" />
+               </image>
+            </ImageView>
+            <Text fill="#fcfcfc" layoutX="102.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For Guests" textAlignment="CENTER" wrappingWidth="114.65576171875">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="454.0" prefWidth="258.0" style="-fx-background-color: #f9faf7;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="65.0" layoutX="152.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Loginn.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="38.0" layoutY="139.0" prefHeight="24.0" prefWidth="65.0" text="Email">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTextField" layoutX="103.0" layoutY="138.0" prefHeight="26.0" prefWidth="188.0" promptText="Email" />
+            <Label layoutX="38.0" layoutY="186.0" prefHeight="24.0" prefWidth="65.0" text="Room#">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginButton" layoutX="38.0" layoutY="258.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="255.0" style="-fx-background-color: #1F5184;" text="Login" textAlignment="RIGHT" textFill="WHITE" />
+            <Button fx:id="cancelButton" layoutX="38.0" layoutY="299.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="26.0" prefWidth="255.0" style="-fx-background-color: #1F5184;" text="Cancel" textAlignment="RIGHT" textFill="WHITE" />
+            <Label fx:id="loginError" layoutX="71.0" layoutY="222.0" prefHeight="24.0" prefWidth="224.0" textFill="#eb7f7f">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="roomNumberField" layoutX="103.0" layoutY="185.0" prefHeight="26.0" prefWidth="188.0" promptText="Room Number" />
+            <Hyperlink fx:id="guestLogin" layoutX="51.0" layoutY="333.0" onAction="#hyperlinkOnAction" prefHeight="25.0" prefWidth="262.0" text="Are you an Employee Please... Login Here." />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

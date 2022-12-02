@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Rectangle fill="#ababab" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1000.0" />
+      <Rectangle fill="#ebebeb" height="600.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="110.0" />
+      <Button fx:id="Home" layoutX="30.0" layoutY="70.0" mnemonicParsing="false" onAction="#navController" prefHeight="50.0" prefWidth="50.0" />
+      <Button fx:id="Check" layoutX="30.0" layoutY="140.0" mnemonicParsing="false" onAction="#navController" prefHeight="50.0" prefWidth="50.0" />
+      <Button fx:id="Service" layoutX="30.0" layoutY="210.0" mnemonicParsing="false" onAction="#navController" prefHeight="50.0" prefWidth="50.0" />
+      <Button fx:id="Logout" layoutX="40.0" layoutY="590.0" mnemonicParsing="false" onAction="#navController" prefHeight="30.0" prefWidth="30.0" />
+      <Label fx:id="Name" layoutX="110.0" layoutY="2.0" text="BedSide" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="40.0" />
+         </font></Label>
+      <Button fx:id="ProfileIcon" disable="true" layoutX="900.0" layoutY="5.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" />
+      <Label fx:id="User" layoutX="843.0" layoutY="17.0" text="Label" />
+      <Rectangle fill="#fbfdff" height="600.0" layoutX="110.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="890.0" />
+      <TableView fx:id="BookingTable" layoutX="166.0" layoutY="70.0" prefHeight="466.0" prefWidth="779.0">
+        <columns>
+          <TableColumn fx:id="TableRoom" prefWidth="102.0" text="Room Number" />
+          <TableColumn fx:id="TableStatus" prefWidth="81.0" text="Status" />
+            <TableColumn fx:id="TableName" prefWidth="175.0" text="Guest Name" />
+            <TableColumn fx:id="TableEmail" prefWidth="287.0" text="Guest Email" />
+            <TableColumn fx:id="TablePhone" prefWidth="134.0" text="Guest Phone Number" />
+        </columns>
+      </TableView>
+      <Label fx:id="RoomLabel" layoutX="174.0" layoutY="555.0" text="Room Number" />
+      <TextField fx:id="RoomEntry" layoutX="174.0" layoutY="578.0" prefHeight="25.0" prefWidth="79.0" promptText="Ex:123" />
+      <Label fx:id="NameLabel" layoutX="314.0" layoutY="555.0" text="Guest Name" />
+      <TextField fx:id="NameEntry" layoutX="272.0" layoutY="578.0" promptText="Ex: John Doe" />
+      <Label fx:id="EmailLabel" layoutX="509.0" layoutY="555.0" text="Guest Email" />
+      <TextField fx:id="EmailEntry" layoutX="443.0" layoutY="578.0" prefHeight="25.0" prefWidth="195.0" promptText="Ex: JDoe123@gmail.com" />
+      <Label fx:id="PhoneLabel" layoutX="656.0" layoutY="555.0" text="Guest Phone Number" />
+      <TextField fx:id="PhoneEntry" layoutX="658.0" layoutY="578.0" prefHeight="25.0" prefWidth="110.0" promptText="Ex: 1234567890" />
+      <Button fx:id="InButton" layoutX="794.0" layoutY="578.0" mnemonicParsing="false" onAction="#CheckIn" prefHeight="25.0" prefWidth="71.0" text="Check-in" />
+      <Label fx:id="SubmitMessage" layoutX="500.0" layoutY="612.0" text="Submission Message" visible="false" />
+      <Button fx:id="OutButton" layoutX="871.0" layoutY="578.0" mnemonicParsing="false" onAction="#CheckOut" text="Check-out" />
+      <Label fx:id="ReserveMessage" layoutX="541.0" layoutY="612.0" textFill="RED" />
+   </children>
+</AnchorPane>

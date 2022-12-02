@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Rectangle fill="#ababab" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1000.0" />
+      <Rectangle fill="#ebebeb" height="600.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="110.0" />
+      <Button fx:id="Home" layoutX="30.0" layoutY="70.0" mnemonicParsing="false" onAction="#navController" prefHeight="50.0" prefWidth="50.0" />
+      <Button fx:id="Check" layoutX="30.0" layoutY="140.0" mnemonicParsing="false" onAction="#navController" prefHeight="50.0" prefWidth="50.0" />
+      <Button fx:id="Service" layoutX="30.0" layoutY="210.0" mnemonicParsing="false" onAction="#navController" prefHeight="50.0" prefWidth="50.0" />
+      <Button fx:id="Logout" layoutX="40.0" layoutY="590.0" mnemonicParsing="false" onAction="#navController" prefHeight="30.0" prefWidth="30.0" />
+      <Label fx:id="Name" layoutX="110.0" layoutY="2.0" text="BedSide" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="40.0" />
+         </font></Label>
+      <Button fx:id="ProfileIcon" disable="true" layoutX="900.0" layoutY="5.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" />
+      <Label fx:id="User" layoutX="843.0" layoutY="17.0" text="Label" />
+      <Rectangle fill="#fbfdff" height="600.0" layoutX="110.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="890.0" />
+      <TableView fx:id="ServiceTable" layoutX="144.0" layoutY="68.0" prefHeight="565.0" prefWidth="255.0">
+        <columns>
+          <TableColumn fx:id="ServiceRoom" prefWidth="104.0" text="Room Number" />
+          <TableColumn fx:id="ServiceStatus" prefWidth="155.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label fx:id="RmLabel" layoutX="500.0" layoutY="157.0" text="Room Number" />
+      <TextField fx:id="RmEntry" layoutX="500.0" layoutY="178.0" prefHeight="25.0" prefWidth="79.0" promptText="EX:123" />
+      <Label fx:id="ServiceLabel1" layoutX="594.0" layoutY="182.0" text="Room Service" />
+      <CheckBox fx:id="RServiceCheck" layoutX="673.0" layoutY="182.0" mnemonicParsing="false" />
+      <Label fx:id="ServiceLabel2" layoutX="713.0" layoutY="182.0" text="Cleaning Service" />
+      <CheckBox fx:id="CServiceCheck" layoutX="807.0" layoutY="182.0" mnemonicParsing="false" />
+      <Button fx:id="SubmitButton" layoutX="604.0" layoutY="277.0" mnemonicParsing="false" onAction="#ReqService" text="Submit" />
+      <Label fx:id="SubmissionMessage" layoutX="617.0" layoutY="260.0" text="Label" visible="false" />
+      <Label fx:id="completeLabel" layoutX="609.0" layoutY="227.0" text="Complete" />
+      <CheckBox fx:id="completeStatus" layoutX="666.0" layoutY="227.0" mnemonicParsing="false" />
+      <Label fx:id="InprogressLabel" layoutX="714.0" layoutY="227.0" text="In Progress" />
+      <CheckBox fx:id="InProgStatus" layoutX="783.0" layoutY="227.0" mnemonicParsing="false" />
+   </children>
+</AnchorPane>
